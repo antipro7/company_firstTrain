@@ -1,0 +1,406 @@
+@charset "UTF-8";
+/*定义全局变量*/
+/*颜色*/
+/*雪碧图*/
+/*单行文字缩略*/
+* {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+ul, p {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/*转换为两位小数的rem单位*/
+/*界面样式*/
+.top-bar {
+  width: 100%;
+  background-color: #1a1a1f;
+  color: #ffffff;
+  font-size: 0.48rem;
+  line-height: 1.2rem;
+  position: relative;
+  display: flex; }
+  .top-bar > div {
+    width: 3.33rem;
+    height: 1.2rem; }
+  .top-bar .back {
+    padding-left: 0.67rem; }
+    .top-bar .back:before {
+      content: "";
+      display: block;
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -3.81rem -0.31rem;
+      width: 0.32rem;
+      height: 0.48rem;
+      position: absolute;
+      left: 0.27rem;
+      bottom: 0.35rem; }
+  .top-bar .banner {
+    text-align: center; }
+  .top-bar .dian {
+    width: 0.64rem;
+    height: 1.2rem;
+    position: absolute;
+    right: 0.35rem;
+    bottom: 0.35rem;
+    background: url(img/css_sprites.png) no-repeat;
+    background-size: 5.09rem 4.43rem;
+    background-position: -2.6rem 0.41rem; }
+
+.location-bar {
+  font-size: 0.4rem;
+  line-height: 1.28rem;
+  border-bottom: 1px solid #dfdfdf;
+  position: relative;
+  display: flex; }
+  .location-bar > div {
+    text-align: center;
+    width: 3.33rem;
+    height: 1.28rem; }
+  .location-bar .local {
+    position: relative; }
+    .location-bar .local span {
+      display: inline-block;
+      width: 3.33rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-left: 0.69rem;
+      padding-right: 0.27rem; }
+    .location-bar .local::before {
+      content: "";
+      width: 0.29rem;
+      height: 0.43rem;
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -3.8rem -1.35rem;
+      position: absolute;
+      left: 0.35rem;
+      bottom: 0.43rem; }
+    .location-bar .local::after {
+      content: "";
+      width: 0.24rem;
+      height: 0.8rem;
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -1.23rem -3.12rem;
+      position: absolute;
+      right: 0;
+      top: 0; }
+  .location-bar .intro_name {
+    font-weight: bold; }
+  .location-bar .scan {
+    position: relative; }
+    .location-bar .scan .vip_icon {
+      width: 1.33rem;
+      height: 1.33rem;
+      position: absolute;
+      right: 1.33rem; }
+      .location-bar .scan .vip_icon .vip_img {
+        display: block;
+        width: 1.33rem;
+        height: 1.07rem;
+        background: url(img/css_sprites.png) no-repeat;
+        background-size: 5.09rem 4.43rem;
+        background-position: 0.19rem -3.47rem; }
+      .location-bar .scan .vip_icon .vip_span {
+        font-size: 0.27rem;
+        display: block;
+        width: 1.33rem;
+        position: absolute;
+        bottom: -0.27rem; }
+    .location-bar .scan .scan_icon {
+      width: 1.33rem;
+      height: 1.33rem;
+      position: absolute;
+      right: 0; }
+      .location-bar .scan .scan_icon .scan_img {
+        display: block;
+        width: 1.33rem;
+        height: 1.07rem;
+        background: url(img/css_sprites.png) no-repeat;
+        background-size: 5.09rem 4.43rem;
+        background-position: -2.03rem -2.36rem; }
+      .location-bar .scan .scan_icon .scan_span {
+        font-size: 0.27rem;
+        display: block;
+        width: 1.33rem;
+        position: absolute;
+        bottom: -0.27rem; }
+
+.show-bar {
+  font-size: 0; }
+  .show-bar img {
+    width: 100%; }
+
+.select-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
+  .select-bar > a {
+    text-align: center;
+    font-size: 0.37rem;
+    color: #000000;
+    text-align: center;
+    text-decoration: none; }
+    .select-bar > a > div {
+      margin: 0 auto;
+      margin-top: 0.67rem;
+      display: block;
+      width: 0.72rem;
+      height: 0.72rem; }
+    .select-bar > a .sijiao {
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -1.36rem -0.23rem; }
+    .select-bar > a .ttk {
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -0.23rem -0.23rem; }
+    .select-bar > a .dc {
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -0.23rem -1.39rem; }
+    .select-bar > a .gkjf {
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -2.51rem -1.31rem; }
+  .select-bar span {
+    display: inline-block;
+    margin-top: 0.19rem;
+    margin-bottom: 0.53rem; }
+
+.show-one {
+  width: 4.65rem;
+  height: 2.04rem;
+  margin-left: 0.19rem; }
+
+.show-two {
+  width: 4.65rem;
+  height: 2.04rem;
+  margin-right: 0.19rem; }
+
+.main {
+  font-size: 0.43rem;
+  font-weight: 800;
+  margin-left: 0.19rem; }
+
+.scroll-bar {
+  height: 4rem;
+  overflow: hidden; }
+  .scroll-bar .scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 4.45rem; }
+    .scroll-bar .scroll .list {
+      margin-top: 0.31rem;
+      margin-left: 0.19rem;
+      display: inline-block; }
+      .scroll-bar .scroll .list img {
+        width: 4.16rem;
+        height: 2.19rem; }
+      .scroll-bar .scroll .list .top {
+        font-size: 0.37rem;
+        color: #000000;
+        margin-left: 0.19rem; }
+      .scroll-bar .scroll .list .down {
+        font-size: 0.35rem;
+        color: #666666;
+        margin-left: 0.19rem;
+        width: 4rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+
+.around-bar {
+  height: 0.8rem;
+  position: relative;
+  line-height: 0.8rem;
+  font-size: 0; }
+  .around-bar .recommend {
+    font-size: 0.43rem;
+    font-weight: 800;
+    margin-left: 0.19rem; }
+  .around-bar .btn {
+    font-size: 0.27rem;
+    color: #fc702b;
+    line-height: 0.8rem;
+    position: absolute;
+    right: 0.43rem; }
+    .around-bar .btn:after {
+      content: "";
+      display: block;
+      width: 0.4rem;
+      height: 0.4rem;
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -4.53rem -0.12rem;
+      position: absolute;
+      right: -0.27rem;
+      top: 0.16rem; }
+
+.content-bar li {
+  width: 9.49rem;
+  height: 2.99rem;
+  margin: 0 auto;
+  border-bottom: 1px solid #dfdfdf;
+  position: relative; }
+  .content-bar li img {
+    position: absolute;
+    width: 2.8rem;
+    height: 2.27rem;
+    top: 0.35rem;
+    bottom: 0.35rem; }
+  .content-bar li .name {
+    font-size: 0.43rem;
+    font-weight: bold;
+    margin-left: 3.17rem;
+    padding-top: 0.53rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .content-bar li .intro {
+    font-size: 0.35rem;
+    color: #333333;
+    margin-left: 3.19rem;
+    padding-top: 0.13rem;
+    height: 0.53rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .content-bar li .money {
+    font-size: 0.29rem;
+    color: #fc702b;
+    margin-left: 3.21rem;
+    position: absolute;
+    bottom: 0.35rem; }
+    .content-bar li .money em {
+      font-size: 0.48rem;
+      padding-left: 0.05rem; }
+  .content-bar li .time {
+    font-size: 0.29rem;
+    color: #666666;
+    position: absolute;
+    bottom: 0.4rem;
+    left: 5.6rem; }
+
+.bottom-warn {
+  width: 100%;
+  text-align: center;
+  font-size: 0.35rem;
+  color: #999999;
+  background-color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 1.35rem; }
+  .bottom-warn .footer {
+    width: 6.45rem;
+    height: 1.04rem;
+    line-height: 1.04rem;
+    margin: 0 auto; }
+    .bottom-warn .footer p:before, .bottom-warn .footer p:after {
+      content: "";
+      width: 1.81rem;
+      border-top: 1px solid #dfdfdf;
+      display: inline-block;
+      vertical-align: middle; }
+    .bottom-warn .footer p:before {
+      margin-right: 0.24rem; }
+    .bottom-warn .footer p:after {
+      margin-left: 0.24rem; }
+
+footer {
+  display: flex;
+  height: 1.35rem;
+  width: 100%;
+  border-top: 1px solid #dfdfdf;
+  position: fixed;
+  bottom: 0;
+  background-color: #ffffff; }
+  footer > div {
+    width: 3.33rem;
+    text-align: center; }
+    footer > div [id] {
+      margin: 0 1.2rem;
+      margin-top: 0.16rem;
+      height: 0.67rem; }
+    footer > div #shouye {
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -0.08rem -2.56rem; }
+    footer > div #yundong {
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -1.16rem -2.53rem; }
+    footer > div #wode {
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -1.24rem -1.39rem; }
+    footer > div span {
+      font-size: 0.29rem;
+      display: block;
+      width: 100%;
+      color: #666666; }
+      footer > div span:hover {
+        color: #fc702b; }
+
+#pageLocation {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: none; }
+  #pageLocation #shade {
+    width: 100%;
+    height: 100%;
+    background-color: #cccccc;
+    opacity: 0.6; }
+  #pageLocation #page {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 70%; }
+    #pageLocation #page .around {
+      display: block;
+      color: #333333;
+      font-size: 0.37rem;
+      font-weight: bold;
+      line-height: 1.07rem;
+      padding-left: 0.8rem;
+      background-color: #dfdfdf; }
+    #pageLocation #page #listItem {
+      padding-left: 0.8rem; }
+      #pageLocation #page #listItem li {
+        height: 1.76rem;
+        border-bottom: 1px solid #dfdfdf;
+        padding-bottom: 0.27rem;
+        font-size: 0;
+        position: relative; }
+        #pageLocation #page #listItem li:after {
+          content: "";
+          display: block;
+          clear: both; }
+      #pageLocation #page #listItem .name {
+        display: block;
+        font-size: 0.43rem;
+        font-weight: bold;
+        line-height: 1.07rem; }
+      #pageLocation #page #listItem .address {
+        display: inline-block;
+        font-size: 0.32rem;
+        line-height: 0.4rem;
+        color: #666666; }
+      #pageLocation #page #listItem .distance {
+        position: absolute;
+        right: 0.27rem;
+        font-size: 0.37rem;
+        line-height: 0.4rem; }
+
+/*# sourceMappingURL=index.css.map */

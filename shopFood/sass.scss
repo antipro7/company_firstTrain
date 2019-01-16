@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+/*转换为两位小数的rem单位*/
+@function px2rem($px){
+  $rem: 37.5px;
+  $n : $px / $rem;
+  $num : round($n * 100) / 100 ;
+  @return $num + rem;
+}
+
+/*单行文字缩略*/
+@mixin wordWrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 雪碧图*/
+@mixin sprites {
+  background: url(img/css_sprites.png) no-repeat;
+  background-size: px2rem(313.5px) px2rem(86px);
+}
+
+$mainColor : #fc6f2a;
+
+* {
+  box-sizing: border-box;
+}
+
+html , body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-bar {
+    width: 100%;
+    background-color: #1a1a1f;
+    color: #ffffff;
+    font-size: px2rem(18px);
+    line-height: px2rem(45px);
+    position: fixed;
+    top: 0;
+    display: flex;
+    > div {
+      width: px2rem(125px);
+      height: px2rem(45px);
+    }
+    .back{
+      padding-left: px2rem(25px);
+      &:before {
+        content: "";
+        display: block;
+        @include sprites;
+        background-position: px2rem(-73px) px2rem(-12px);
+        width: px2rem(12px);
+        height: px2rem(18px);
+        position: absolute;
+        left: px2rem(10px);
+        bottom: px2rem(13px);
+      }
+    }
+    .banner {
+      text-align: center;
+    }
+    .dian {
+      display: block;
+      font-size: 0;
+      width: px2rem(24px);
+      height: px2rem(45px);
+      position: absolute;
+      right: px2rem(13px);
+      bottom: px2rem(13px);
+      @include sprites();
+      background-position: px2rem(-193px) px2rem(17px);
+    }
+}
+
+.location-bar {
+  font-size: px2rem(15px);
+  height: px2rem(48px);
+  width: 100%;
+  border-bottom: 1px solid #dfdfdf;
+  position: fixed;
+  top: px2rem(45px);
+  span {
+    display: inline-block;
+    margin-left: px2rem(30px);
+    width: px2rem(95px);
+    line-height: px2rem(48px);
+    @include wordWrap();
+  }
+  span:before {
+    content: "";
+      display: block;
+      @include sprites;
+      background-position: px2rem(-40px) px2rem(-11px);
+      width: px2rem(11px);
+      height: px2rem(16px);
+      position: absolute; 
+      left: px2rem(13px);
+      bottom: px2rem(16px);
+  }
+  span::after {
+    content: "";
+    display: inline-block;
+    width: px2rem(9px);
+    height: px2rem(6px);
+    @include sprites;
+    background-position: px2rem(-10.5px) px2rem(-11px);
+    position: absolute;
+    top: px2rem(20.5px);
+    left: px2rem(120px);
+  }
+}
+
+.content-bar {
+  display: flex;
+  position: relative;
+  height: px2rem(525px);
+  margin-top: px2rem(94px);
+  .left {
+    position: fixed;
+    left: 0;
+    top: px2rem(94px);
+    li {
+      font-size: px2rem(14px);
+      color: #b3b3b3;
+      height: px2rem(52px);
+      line-height: px2rem(52px);
+      width: px2rem(80px);
+      text-align: center;
+      border-bottom: 1px solid #dfdfdf;
+    }
+  }
+  .active {
+    color: #333333 !important;
+    &:before {
+      content: "";
+      background-color: $mainColor;
+      height: px2rem(52px);
+      width: px2rem(5px);
+      position: absolute;
+      left: 0;
+    }
+  }
+  #rightOuter {
+    width: px2rem(295px);
+    margin-left: px2rem(80px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .right {
+        li {
+          width: px2rem(267px);
+          height: px2rem(100px);
+          margin-left: px2rem(20px);
+          border-bottom: 1px solid #dfdfdf;
+          position: relative;
+        }
+        img {
+          width: px2rem(79px);
+          height: px2rem(100px);
+          padding-top: px2rem(13px);
+          padding-bottom: px2rem(13px);
+          margin-right: px2rem(11.5px);
+          position: absolute;
+          left: px2rem(-8px);
+        }
+        .intro {
+          display: inline-block;
+          width: px2rem(170px);
+          font-size: px2rem(15px);
+          position: absolute;
+          left: px2rem(90px);
+        }
+        .price {    
+          display: inline-block;
+          font-size: px2rem(17px);
+          color: $mainColor;
+          position: absolute;
+          bottom: px2rem(1px);
+          left: px2rem(87px);
+        }
+        .plus-minus { 
+          width: px2rem(78px);
+          height: px2rem(23px);
+          display: flex;
+          justify-content: space-around;
+          position: absolute;
+          bottom: px2rem(17px);
+          right: px2rem(1px);
+          div {
+            width: px2rem(23px);
+            height: px2rem(23px);
+            padding: 0;
+            margin: 0;  
+          } 
+          div[id*="plus"] {
+            position: absolute;
+            top: px2rem(0px);
+            left: px2rem(50px);
+            @include sprites;
+            background-position: px2rem(-149px) px2rem(-10px);
+          }
+          div[id*="minus"] {
+            position: absolute;
+            top: px2rem(0px);
+            left: px2rem(-5px);
+            @include sprites;
+            background-position: px2rem(-106px) px2rem(-10px);
+            display: none;
+          }
+          span {
+            color: $mainColor;
+            font-size: px2rem(15.5px);
+            position: absolute;
+            top: px2rem(1px);
+            left: px2rem(31px);
+          }
+        }
+    }
+  }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: px2rem(48px);
+    font-size: px2rem(16px);
+    text-align: center;
+    line-height: px2rem(48px);
+    color: #ffffff;
+    position: relative; 
+    .money {
+      width: px2rem(217px);
+      background-color: #333333;
+      position: absolute;
+      left: 0;
+      .shopcar {
+        width: px2rem(58px);
+        height: px2rem(58px);
+        position: absolute;
+        left: px2rem(13px);
+        bottom: px2rem(20px);
+        @include sprites;
+        background-position: px2rem(-240px) px2rem(-10px);
+      }
+      #sum-icon {
+        background-color: $mainColor;
+        border-radius: 20px;
+        position: absolute;
+        left: px2rem(58px);
+        bottom: px2rem(61.5px);
+        font-size: px2rem(13px);
+        line-height: px2rem(20px);
+        padding: 0 px2rem(3px);
+      }
+    }
+    .check {
+      position: absolute;
+      right: 0;
+      width: px2rem(158px);
+      background-color: $mainColor;
+    }
+}

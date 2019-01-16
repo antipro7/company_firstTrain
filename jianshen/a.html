@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,body {
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+    }
+    .container {
+      width: 375px;
+      height: 50px;
+      display: flex;
+    }
+    .container > div {
+      height: 50px;
+      width: 125px;
+      text-align: center;
+      line-height: 50px;
+    }
+    .local span {
+      display: inline-block;
+      width: 125px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      box-sizing: border-box;
+      position: relative;
+      padding-left: 26px;
+      padding-right: 10px;
+    }
+    .local span::before {
+      content: "";
+      display: inline-block;
+      width: 11px;
+      height: 16px;
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 191px 166px;
+      background-position: -142.5px -50.5px;
+      position: absolute;
+      left: 13px;
+      bottom: 16px;
+    }
+    .local span::after {
+      content: "";
+      display: inline-block;
+      width: 9px;
+      height: 30px;
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: 191px 166px;
+      background-position: -46px -117px;
+      position: absolute;
+      right: 0px;
+    }
+    .intro_name {
+      font-weight: bold;
+    }
+
+    .scan {
+      position: relative;
+    }
+    
+    .vip_icon {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      background-color: aqua;
+      position: absolute;
+      right: 50px;
+    }
+
+    .vip-img {
+      display: block;
+      width: 50px;
+      height: 40px;
+      background: url(img/css_sprites.png) no-repeat;
+      background-size: px2rem(191px) px2rem(166px);
+      background-position: px2rem(-10px) px2rem(-139px);
+    }
+
+    .vip-span {
+      font-size: 10px;
+      display: block;
+      width: 50px;
+      position: absolute;
+      bottom: -10px;
+    }
+
+    .scan_icon {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: absolute;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="local">
+      <span>软件园805号一楼大厅</span>
+    </div>
+    <div class="intro_name">WAK</div>
+    <div class="scan">
+      <div class="vip_icon">
+        <div class="vip-img"></div>
+        <span class="vip-span">会员码</span>
+      </div>
+      <div class="scan_icon">
+        <div class="scan-img"></div>
+        <span class="scan-span">扫一扫</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

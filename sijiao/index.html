@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+      /*获取屏幕宽度*/
+      let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      /*获取htmlDom*/
+      let htmlDom = document.getElementsByTagName('html')[0];
+      htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+
+      window.addEventListener('resize', () => {
+          let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+          htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+      })
+    </script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="back">返回</div>
+        <div class="banner">私教</div>
+        <div class="dian"></div>
+    </div>
+    <div class="location-bar">
+      <div class="local">
+        <span>软件园805号一楼大厅</span>
+      </div>
+      <div class="intro_name">WAK</div>
+      <div class="scan">
+        <div class="vip_icon">
+          <div class="vip_img"></div>
+          <span class="vip_span">会员码</span>
+        </div>
+        <div class="scan_icon">
+          <div class="scan_img"></div>
+          <span class="scan_span">扫一扫</span>
+        </div>
+      </div>
+    </div>
+    <div class="show-bar">
+      <img src="img/man.png">
+    </div>
+    <div class="select-bar">
+      <div class="left" onclick="openLocation()">
+        <span>位置</span>
+      </div>
+      <div class="middle" onclick="openPaixu()">
+        <span>排序</span>
+      </div>
+      <div class="right" onclick="openShaixuan()">
+        <span>筛选</span>
+      </div>
+    </div>
+    <div class="content-bar">
+      <ul>
+        <li>
+          <img src="img/small.png">
+          <p class="name">教练名字</p>
+          <p class="intro">这里是教练简介，这里是教练简介，这里是教练简介。</p>
+          <span class="money">￥<em>19</em>/课时起</span>
+          <span class="time">累计授课50节</span>
+        </li>
+        <li>
+          <img src="img/small.png">
+          <p class="name">教练名字</p>
+          <p class="intro">这里是教练简介，这里是教练简介，这里是教练简介。</p>
+          <span class="money">￥<em>19</em>/课时起</span>
+          <span class="time">累计授课50节</span>
+        </li>
+        <li>
+          <img src="img/small.png">
+          <p class="name">教练名字</p>
+          <p class="intro">这里是教练简介，这里是教练简介，这里是教练简介。</p>
+          <span class="money">￥<em>19</em>/课时起</span>
+          <span class="time">累计授课50节</span>
+        </li>
+        <li>
+          <img src="img/small.png">
+          <p class="name">教练名字</p>
+          <p class="intro">这里是教练简介，这里是教练简介，这里是教练简介。</p>
+          <span class="money">￥<em>19</em>/课时起</span>
+          <span class="time">累计授课50节</span>
+        </li>
+        <li>
+          <img src="img/small.png">
+          <p class="name">教练名字</p>
+          <p class="intro">这里是教练简介，这里是教练简介，这里是教练简介。</p>
+          <span class="money">￥<em>19</em>/课时起</span>
+          <span class="time">累计授课50节</span>
+        </li>
+        <li>
+          <img src="img/small.png">
+          <p class="name">教练名字</p>
+          <p class="intro">这里是教练简介，这里是教练简介，这里是教练简介。</p>
+          <span class="money">￥<em>19</em>/课时起</span>
+          <span class="time">累计授课50节</span>
+        </li>
+        <li>
+          <img src="img/small.png">
+          <p class="name">教练名字</p>
+          <p class="intro">这里是教练简介，这里是教练简介，这里是教练简介。</p>
+          <span class="money">￥<em>19</em>/课时起</span>
+          <span class="time">累计授课50节</span>
+        </li>
+        <li>
+          <img src="img/small.png">
+          <p class="name">教练名字</p>
+          <p class="intro">这里是教练简介，这里是教练简介，这里是教练简介。</p>
+          <span class="money">￥<em>19</em>/课时起</span>
+          <span class="time">累计授课50节</span>
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <div class="footer">
+        <p>我是有底线的</p>
+      </div>
+    </footer>
+
+    <div id="pageLocation">
+      <div id="shade"></div>
+      <div id="page">
+        <ul>
+          <li class="page-header">
+            <span class="around">附近</span>
+            <span class="all">全部</span>
+          </li>
+          <li id="region-list">
+          </li>
+          <li id="place-list">
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="pagePaixu">
+      <div id="shadePaixu"></div>
+      <div id="contentPaixu">
+        <p>好评优先</p>
+        <p>距离优先</p>
+        <p>人气最高</p>
+        <p>价格降序</p>
+        <p>价格升序</p>
+      </div>
+    </div>
+
+    <div id="pageShaixuan">
+      <div id="shadeShaixuan"></div>
+      <div id="contentShaixuan">
+        <div class="sex">
+          <p>性别</p>
+          <span>男</span>
+          <span>女</span>
+        </div>
+        <div class="price">
+          <p>价格区间</p>
+          <span>20课时及以下</span>
+          <span>20-40课时</span>
+          <span>40课时及以上</span>
+        </div>
+        <div class="footer">
+          <span class="clear">重置</span>
+          <span class="sure">确定</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
