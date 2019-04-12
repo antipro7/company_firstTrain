@@ -1,0 +1,306 @@
+@charset "UTF-8";
+/* 转化为两位小数的rem单位 */
+/* 雪碧图 */
+/* 单行文字缩略 */
+/* 页面样式 */
+* {
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+ul, li, p {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%; }
+  .container .topBar {
+    display: flex;
+    position: relative;
+    height: 1.2rem;
+    color: #fff;
+    font-size: 0.48rem;
+    background-color: #1a1a1f; }
+    .container .topBar > div {
+      flex-basis: 33.3%;
+      line-height: 1.2rem; }
+    .container .topBar .tb_left {
+      padding-left: 0.67rem; }
+      .container .topBar .tb_left::before {
+        position: absolute;
+        left: 0.27rem;
+        bottom: 0.35rem;
+        content: "";
+        display: block;
+        background: url(../../jianshen/img/css_sprites.png) no-repeat;
+        background-size: 5.09rem 4.43rem;
+        background-position: -3.81rem -0.31rem;
+        width: 0.32rem;
+        height: 0.48rem; }
+    .container .topBar .tb_center {
+      text-align: center; }
+    .container .topBar .tb_right {
+      position: absolute;
+      right: 0.35rem;
+      bottom: 0.35rem;
+      width: 0.64rem;
+      height: 1.2rem;
+      background: url(../../jianshen/img/css_sprites.png) no-repeat;
+      background-size: 5.09rem 4.43rem;
+      background-position: -2.6rem 0.41rem; }
+  .container .main {
+    flex-grow: 1;
+    margin-bottom: 1.33rem;
+    overflow: auto; }
+    .container .main .location_bar {
+      display: flex;
+      font-size: 0.4rem;
+      height: 1.28rem;
+      line-height: 1.28rem;
+      border-bottom: 1px solid #dfdfdf; }
+      .container .main .location_bar > div {
+        flex-basis: 33.3%;
+        text-align: center; }
+      .container .main .location_bar .local {
+        position: relative;
+        padding-left: 0.69rem;
+        padding-right: 0.27rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+        .container .main .location_bar .local::before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          width: 0.29rem;
+          height: 0.43rem;
+          margin-top: 0.43rem;
+          margin-left: -0.4rem;
+          margin-right: 0.13rem;
+          background: url(../../jianshen/img/css_sprites.png) no-repeat;
+          background-size: 5.09rem 4.43rem;
+          background-position: -3.8rem -1.35rem; }
+        .container .main .location_bar .local::after {
+          content: "";
+          position: absolute;
+          margin-left: -1.47rem;
+          width: 0.24rem;
+          height: 0.8rem;
+          background: url(../../jianshen/img/css_sprites.png) no-repeat;
+          background-size: 5.09rem 4.43rem;
+          background-position: -1.23rem -3.12rem; }
+      .container .main .location_bar .banner {
+        font-weight: bold; }
+      .container .main .location_bar .scan > div {
+        float: right;
+        width: 1.33rem;
+        height: 1.33rem;
+        font-size: 0.27rem;
+        text-align: center;
+        background: url(../../jianshen/img/css_sprites.png) no-repeat;
+        background-size: 5.09rem 4.43rem; }
+      .container .main .location_bar .scan .icon_vip {
+        background-position: 0.19rem -3.47rem; }
+        .container .main .location_bar .scan .icon_vip .img_vip {
+          display: block;
+          width: 1.33rem;
+          height: 1.07rem;
+          margin-bottom: -0.8rem; }
+      .container .main .location_bar .scan .icon_scan {
+        background-position: -2.03rem -2.36rem; }
+        .container .main .location_bar .scan .icon_scan .scan_vip {
+          display: block;
+          width: 1.33rem;
+          height: 1.07rem;
+          margin-bottom: -0.8rem; }
+    .container .main .show_bar img {
+      display: block;
+      width: 100%; }
+    .container .main .select_bar {
+      display: flex; }
+      .container .main .select_bar > div {
+        flex-basis: 25%;
+        height: 2.4rem;
+        text-align: center;
+        font-size: 0.37rem;
+        color: #000; }
+        .container .main .select_bar > div > i {
+          display: block;
+          margin: 0.67rem auto 0.21rem;
+          width: 0.72rem;
+          height: 0.72rem;
+          background: url(../../jianshen/img/css_sprites.png) no-repeat;
+          background-size: 5.09rem 4.43rem; }
+        .container .main .select_bar > div .sj_icon {
+          background-position: -1.36rem -0.23rem; }
+        .container .main .select_bar > div .ttk_icon {
+          background-position: -0.23rem -0.23rem; }
+        .container .main .select_bar > div .dc_icon {
+          background-position: -0.23rem -1.39rem; }
+        .container .main .select_bar > div .gkxf_icon {
+          background-position: -2.51rem -1.31rem; }
+    .container .main .scroll_bar {
+      overflow: scroll;
+      white-space: nowrap; }
+      .container .main .scroll_bar::-webkit-scrollbar {
+        display: none; }
+      .container .main .scroll_bar img {
+        width: 4.65rem;
+        height: 2.04rem;
+        margin: 0 0.19rem; }
+    .container .main .course_bar p {
+      font-size: 0.43rem;
+      font-weight: 800;
+      margin-left: 0.19rem; }
+    .container .main .course_bar ul {
+      height: 4.45rem;
+      overflow: scroll;
+      white-space: nowrap; }
+      .container .main .course_bar ul::-webkit-scrollbar {
+        display: none; }
+      .container .main .course_bar ul li {
+        display: inline-block;
+        margin: 0.32rem 0.19rem 0; }
+        .container .main .course_bar ul li img {
+          width: 4.16rem;
+          height: 2.19rem; }
+        .container .main .course_bar ul li .top {
+          font-size: 0.37rem;
+          color: #000;
+          margin-left: 0.19rem; }
+        .container .main .course_bar ul li .down {
+          font-size: 0.35rem;
+          color: #666;
+          margin-left: 0.19rem;
+          width: 4rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+    .container .main .store_bar {
+      position: relative; }
+      .container .main .store_bar p {
+        font-size: 0.43rem;
+        font-weight: 800;
+        margin-left: 0.19rem; }
+      .container .main .store_bar .btn {
+        position: absolute;
+        margin: -0.53rem 0 0 8.27rem;
+        font-size: 0.27rem;
+        color: #fc702b; }
+        .container .main .store_bar .btn::after {
+          content: "";
+          display: block;
+          position: absolute;
+          margin: -0.48rem 0 0 1.2rem;
+          width: 0.4rem;
+          height: 0.4rem;
+          background: url(../../jianshen/img/css_sprites.png) no-repeat;
+          background-size: 5.09rem 4.43rem;
+          background-position: -4.53rem -0.12rem; }
+      .container .main .store_bar .content li {
+        display: flex;
+        width: 9.49rem;
+        height: 2.99rem;
+        margin: 0 auto;
+        border-bottom: 1px solid #dfdfdf;
+        overflow: hidden; }
+        .container .main .store_bar .content li img {
+          width: 2.8rem;
+          height: 2.27rem;
+          margin-top: 0.35rem; }
+        .container .main .store_bar .content li .content_intro {
+          width: 6.4rem;
+          height: 2.99rem;
+          margin-left: 0.27rem;
+          overflow: hidden; }
+          .container .main .store_bar .content li .content_intro .name {
+            margin-top: 0.53rem;
+            font-size: 0.43rem;
+            font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+          .container .main .store_bar .content li .content_intro .intro {
+            font-size: 0.35rem;
+            color: #333;
+            margin-top: 0.13rem;
+            height: 0.53rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+          .container .main .store_bar .content li .content_intro .money {
+            position: absolute;
+            font-size: 0.29rem;
+            color: #fc702b; }
+            .container .main .store_bar .content li .content_intro .money em {
+              font-size: 0.48rem;
+              margin-right: 0.13rem;
+              padding-left: 0.05rem; }
+          .container .main .store_bar .content li .content_intro .time {
+            position: absolute;
+            margin: 0.16rem 0 0 2.67rem;
+            font-size: 0.29rem;
+            color: #666; }
+    .container .main .bottom_line {
+      width: 100%;
+      text-align: center;
+      font-size: 0.35rem;
+      color: #999;
+      background-color: #fff;
+      font-weight: bold; }
+      .container .main .bottom_line p {
+        width: 6.45rem;
+        height: 1.04rem;
+        line-height: 1.04rem;
+        margin: 0 auto; }
+        .container .main .bottom_line p::before, .container .main .bottom_line p::after {
+          content: "";
+          display: inline-block;
+          width: 1.81rem;
+          border-top: 1px solid #dfdfdf;
+          vertical-align: middle; }
+        .container .main .bottom_line p::before {
+          margin-right: 0.24rem; }
+        .container .main .bottom_line p::after {
+          margin-left: 0.24rem; }
+  .container .footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1.33rem;
+    border-top: 1px solid #dfdfdf;
+    background-color: #fff; }
+    .container .footer > a {
+      flex-basis: 33.3%;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.29rem;
+      color: #666; }
+      .container .footer > a i {
+        display: block;
+        height: 0.69rem;
+        margin: 0 1.2rem;
+        margin-top: 0.16rem; }
+      .container .footer > a .icon_shouye {
+        background: url(../../jianshen/img/css_sprites.png) no-repeat;
+        background-size: 5.09rem 4.43rem;
+        background-position: -0.11rem -2.56rem; }
+      .container .footer > a .icon_yundong {
+        background: url(../../jianshen/img/css_sprites.png) no-repeat;
+        background-size: 5.09rem 4.43rem;
+        background-position: -1.16rem -2.53rem; }
+      .container .footer > a .icon_wode {
+        background: url(../../jianshen/img/css_sprites.png) no-repeat;
+        background-size: 5.09rem 4.43rem;
+        background-position: -1.24rem -1.39rem; }
+
+/*# sourceMappingURL=index.css.map */

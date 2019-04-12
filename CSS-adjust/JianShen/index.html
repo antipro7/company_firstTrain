@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>健身</title>
+  <link rel="stylesheet" href="index.css">
+  <script>
+    let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+    let htmlDom = document.getElementsByTagName('html')[0];
+    htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+    window.addEventListener('resize', () => {
+      let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+    })
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="topBar">
+      <div class="tb_left">返回</div>
+      <div class="tb_center">首页</div>
+      <div class="tb_right"></div>
+    </div>
+    <div class="main">
+      <div class="location_bar">
+        <div class="local">软件园805号一楼大厅</div>
+        <div class="banner">WAK</div>
+        <div class="scan">
+          <div class="icon_scan"><i class="scan_vip"></i>扫一扫</div>
+          <div class="icon_vip"><i class="img_vip"></i>会员码</div>
+        </div>
+      </div>
+      <div class="show_bar"><img src="../../jianshen/img/show.png"></div>
+      <div class="select_bar">
+        <div><i class="sj_icon"></i>私教</div>
+        <div><i class="ttk_icon"></i>团体课</div>
+        <div><i class="dc_icon"></i>订餐</div>
+        <div><i class="gkxf_icon"></i>购卡续费</div>
+      </div>
+      <div class="scroll_bar">
+        <img src="../../jianshen/img/one.png">
+        <img src="../../jianshen/img/two.png">
+        <img src="../../jianshen/img/two.png">
+      </div>
+      <div class="course_bar">
+        <p>推荐课程</p>
+        <ul>
+          <li>
+            <img src="../../jianshen/img/three.png">
+            <p class="top">哑铃臂力练习</p>
+            <p class="down">这是课程简介最多一行这是课程简介最多一行</p>
+          </li>
+          <li>
+            <img src="../../jianshen/img/three.png">
+            <p class="top">哑铃臂力练习</p>
+            <p class="down">这是课程简介最多一行这是课程简介最多一行</p>
+          </li>
+          <li>
+            <img src="../../jianshen/img/three.png">
+            <p class="top">哑铃臂力练习</p>
+            <p class="down">这是课程简介最多一行这是课程简介最多一行</p>
+          </li>
+        </ul>
+      </div>
+      <div class="store_bar">
+        <p>附近门店</p><span class="btn">全部门店</span>
+        <div class="content">
+          <ul>
+            <li>
+              <img src="../../jianshen/img/four.png">
+              <div class="content_intro">
+                <p class="name">软件园二期乐享健身房软件园二期乐享健身房</p>
+                <p class="intro">这里是教练简介，这里是教练简介，这里是教练简介。</p>
+                <span class="money">￥<em>19</em>/课时起</span>
+                <span class="time">累计授课50节</span>
+              </div>
+            </li>
+            <li>
+              <img src="../../jianshen/img/four.png">
+              <div class="content_intro">
+                <p class="name">软件园二期乐享健身房软件园二期乐享健身房</p>
+                <p class="intro">这里是教练简介，这里是教练简介，这里是教练简介。</p>
+                <span class="money">￥<em>19</em>/课时起</span>
+                <span class="time">累计授课50节</span>
+              </div>
+            </li>
+            <li>
+              <img src="../../jianshen/img/four.png">
+              <div class="content_intro">
+                <p class="name">软件园二期乐享健身房软件园二期乐享健身房</p>
+                <p class="intro">这里是教练简介，这里是教练简介，这里是教练简介。</p>
+                <span class="money">￥<em>19</em>/课时起</span>
+                <span class="time">累计授课50节</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom_line">
+        <p>我是有底线的</p>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="#"><i class="icon_shouye"></i>首页</a>
+      <a href="#"><i class="icon_yundong"></i>运动</a>
+      <a href="#"><i class="icon_wode"></i>我的</a>
+    </div>
+  </div>
+</body>
+</html>

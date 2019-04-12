@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    
+    <script>
+        let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        let htmlDom = document.getElementsByTagName('html')[0];
+        htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+
+        window.addEventListener('resize', () => {
+            let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+        })
+    </script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="back">返回</div>
+        <div class="banner">订餐</div>
+        <div class="dian"></div>
+    </div>
+    <div class="location-bar">
+      <span>门店的标题门店的标题门店的标题</span>
+    </div>
+    <div class="content-bar">
+        <div class="left">
+            <ul id="foodType">
+            </ul>
+        </div>
+        <div id="rightOuter">
+          <div class="right">
+            <ul id="foodList">
+            </ul>
+          </div>
+        </div>
+    </div>
+    <footer>
+      <div class="money">
+        <div class="shopcar"></div>
+        <span id="sum-icon"></span>
+        <span>￥<span id="sum-money">0</span></span>
+      </div>
+      <div class="check">去结算</div>
+    </footer>
+    
+    <script src="base.js"></script> 
+    <script src="main.js"></script>
+</body>
+</html>
